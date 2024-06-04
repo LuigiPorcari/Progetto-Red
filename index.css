@@ -1,0 +1,237 @@
+/* !INIZIO SETTAGGI INIZIALI */
+
+body {
+    margin: 0;
+}
+
+:root {
+    --grey: #ececec;
+    --red: #C67F7F;
+}
+
+.font-title {
+    font-family: "Nova Square", sans-serif;
+}
+
+.font-gen {
+    font-family: "Rajdhani", sans-serif;
+}
+
+.font-red {
+    color: darkred;
+}
+
+.bg-red {
+    background: darkred;
+}
+
+.bg-grey {
+    background: var(--grey);
+}
+
+/* !FINE SETTAGGI INIZIALI */
+
+.navbar img {
+    height: 10vh;
+}
+
+.nav-item:hover::before{
+    content: "";
+    width: 0vh;
+    height: 0vh;
+    background: rgba(139, 0, 0, 0.2);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: zoom-nav 0.5s ease forwards;
+}
+
+header {
+    background: linear-gradient(180deg, rgba(131, 58, 180, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(125, 125, 125, 1) 0%, rgba(250, 246, 246, 1) 0%, rgba(252, 250, 250, 1) 36%, rgba(254, 253, 253, 0) 100%), url("./media/mountains2.png"), url("./media/switzerland-862870_1920.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header h1 {
+    top: 35vh;
+    letter-spacing: 10vh;
+}
+
+.intro::before {
+    content: open-quote;
+    color: darkred;
+    font-size: 15vh;
+    position: absolute;
+    transform: translate(-100%, -40%);
+}
+
+.intro::after {
+    content: close-quote;
+    color: darkred;
+    font-size: 15vh;
+    position: absolute;
+    transform: translate(0, -10%);
+}
+
+.pseudo-icon {
+    border-bottom: 2px solid darkred;
+}
+
+.pseudo-icon::after {
+    content: "";
+    height: 2.5vh;
+    width: 2.5vh;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    transform: translate(0, 50%);
+    border: 2px solid darkred;
+    background: var(--grey);
+}
+
+.cont-btn {
+    background: url("./media/trees2.png"), var(--grey);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    min-height: 110vh;
+}
+
+.btn1{
+    transition: 0.5s;
+}
+
+.btn1:hover{
+    color: black !important;
+    border: 2px solid black !important;
+    background: var(--grey);
+
+}
+
+.cont-timeline dt {
+    color: var(--red);
+}
+
+.cont-timeline dl {
+    border-left: 5px solid darkred;
+}
+
+.cont-timeline dt::before {
+    content: "";
+    height: 2.5vh;
+    width: 2.5vh;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid darkred;
+    background: white;
+    transform: translate(-150%);
+}
+
+.cont-timeline {
+    background: url("./media/single.png"), white;
+    background-repeat: no-repeat;
+    background-position: bottom right 0vh;
+}
+
+.card-img-top{
+    width: 20vh;
+    height: 20vh;
+    border: 2px solid darkred;
+}
+
+.card{
+    transition: 1s;
+}
+
+.card:hover{
+    transform: scale(1.3);
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card1:hover{
+    transform: scale(1.3) translate(70%);
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card4:hover{
+    transform: scale(1.3) translate(-70%);
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card p {
+    font-size: 2vh;
+}
+
+.img-benefit {
+    width: 40vh;
+    height: 40vh;
+    border: 2px solid darkred;
+    transition: 1s;
+}
+
+.img-benefit:hover{
+    transform: scale(1.5);
+}
+
+/* todo ANIMAZIONI */
+
+@keyframes zoom-nav{
+    from{
+        width: 0vh;
+        height: 0vh;
+    } to{
+        width: 5vh;
+        height: 5vh;
+    }
+}
+
+/* !MEDIA QUERIES */
+
+@media screen and (max-width: 995px){
+    .card1:hover{
+        transform: scale(1.3);
+        z-index: 99;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    .card4:hover{
+        transform: scale(1.3);
+        z-index: 99;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .cont-btn {
+        min-height: 130vh;
+    }
+}
+
+@media screen and (max-width: 430px){
+    header h1 {
+        letter-spacing: 5vh;
+    }
+
+    .img-benefit {
+        width: 30vh;
+        height: 30vh;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .cont-btn {
+        min-height: 150vh;
+    }
+}
+
+@media screen and (max-width: 325px){
+    .cont-btn {
+        min-height: 225vh;
+    }
+}
